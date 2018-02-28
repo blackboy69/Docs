@@ -15,7 +15,7 @@ Seperate the workflow from the UI by using  a Task based REST API.
 
 The OneLegal filing API preserves state based on previous choices. It usees the  [CQRS](https://bjoernkw.com/2017/04/02/design-patterns-event-sourcing-and-command-and-query-responsibility-segregation-cqrs/) design pattern, but does not attach state to the requests via cookies or client object.
 
-The API is dynamic. Not all all endpoints cannot be determined beforehand, endpoints are dynamically presented **based on the data**. 
+The API is dynamic. Some endpoints cannot be determined beforehand, endpoints may be dynamically presented **based on the data**. 
 
 This type of API will fulfill the goals of enabling next generation UI development, 3rd party API integration and modernization of the platform.
 
