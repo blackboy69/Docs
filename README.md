@@ -1,7 +1,7 @@
 # Task Based API for OneLegal Filing Workflow
 
 ## Background
-Proposal for a task based filing API. OneLegal's "secret sauce" is not the technology, it is the easy to use workflow that every customer uses on a daily basis. 
+Proposal for a task based filing API. OneLegal's "secret sauce" is to use workflow that every customer uses on a daily basis. 
 
 This workflow currently is encapsulated in the UI layer and very difficult to expose as an API to allow integrations. 
 
