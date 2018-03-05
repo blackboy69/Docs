@@ -19,6 +19,7 @@ The UI is very simple as follows;
 |||
 |---|---
 |Select Jira Issues| [OLP-12,OLP-321,EN-32,EN-553 ] |
+|OR Select Date Range| [10/23/2017] to [04/05/2018]
 |Choose Branch| [List-Of-Branches-From-Plastic] |
 |Choose Database| [List-of-Onelegal-Databases]
 |**RUN SQL**|**ROLLBACK SQL**|
@@ -26,15 +27,20 @@ _________________________
 
 Console UI will also have a "configuration" page that handles configuring Plactic endpoints/credentials & database connection strings.
 
+The output of the console will be a table of jira issues, with pass/fail columns. Any syntax errors should be highlighted and the script displayed. Script should always run inside a transaction that issues a rollback if any errors occur. 
+
 ## Phase 1: Commit developer sql scripts to source control
 Create a new folder structure in source control called "SQL". This will contain all schema and data modification scripts.
 
 ```
 SQL\Schema
 SQL\Scripts
+SQL\RunOnce
 ```
 
 Changes to sql schema must go in the "schema" folder, changes to sql scripts go into the "Scripts" folder. This is seperated to allow for schema changes to run before data loading/modification scripts.
+
+Scripts in the "RunOnce" folder cannot be rolled back, and will only be run once. These should only be used in excepitonal circumstances.
 
 *File naming*
 Files will be named after the issue number. All scripts shall have a rollback script assocated with them. Rollback script should have a `_rollback` appeneded to the name.
