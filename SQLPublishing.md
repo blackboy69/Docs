@@ -1,4 +1,4 @@
-# SQL publishing
+# OneLegal SQL publishing
 
 ## Problem
 SQL management is a manual process. This causes environments to get out of sync, and creates lots of busy work for the QA team. When an environment is no longer working due to missing SP fields, columns or tables, developers, QA and business analysts become blocked. The fix requires much research and trial and error to fix.
